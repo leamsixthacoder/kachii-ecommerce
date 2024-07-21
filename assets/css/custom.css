@@ -1,3 +1,89 @@
-/*
-Custom Css
-*/
+/* General styles */
+.over{
+    padding: 85px 0;
+}
+/* Flex container */
+.flex-container {
+    margin-top: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribute space evenly around the items */
+    gap: 20px;
+}
+
+/* Flex items */
+.item {
+    flex: 1 1 calc(20% - 10px); /* Approximately 30% width for each item */
+    box-sizing: border-box;
+    max-width: calc(20% - 10px);
+    height: 480px; /* Set a fixed height for uniformity */
+}
+
+.flex-container .item:nth-child(4),
+.flex-container .item:nth-child(5) {
+    flex: 1 1 calc(20% - 10px); /* Approximately 45% width for each item in the second row */
+    max-width: calc(20% - 10px);
+    height: 480px; /* Set a fixed height for uniformity */
+}
+
+.item img {
+    width: 100%;
+    height: 100%; /* Make the image fill the container */
+    object-fit: cover; /* Ensure the images cover the container without distortion */
+    border-radius: 10px; /* Optional: Adds rounded corners to the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+}
+
+.text {
+    margin-top: 5px;
+    background-color: #666666;
+    color: #fff;
+    border-radius: 1px;
+    text-align: center;
+}
+
+.text span {
+    font-weight: 400;
+    font-size: 20px;
+}
+.text p {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .item {
+        flex: 1 1 calc(45% - 10px); /* Two items per row on smaller screens */
+        max-width: calc(45% - 10px);
+        height: 480px; /* Set a fixed height for uniformity */
+    }
+
+    .flex-container .item:nth-child(4),
+    .flex-container .item:nth-child(5) {
+        flex: 1 1 calc(45% - 10px); /* Approximately 45% width for each item in the second row */
+        max-width: calc(45% - 10px);
+        height: 480px;
+    }
+    .text {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        flex: 1 1 100%; /* One item per row on very small screens */
+        max-width: 100%;
+        height: 200px; /* Set a fixed height for uniformity */
+    }
+    .text {
+        display: none;
+    }
+
+    .flex-container .item:nth-child(4),
+    .flex-container .item:nth-child(5) {
+        flex: 1 1 100%;
+        max-width: 100%;
+        height: 200px; /* Set a fixed height for uniformity */
+    }
+}
