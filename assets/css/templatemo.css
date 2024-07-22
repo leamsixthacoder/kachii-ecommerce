@@ -95,8 +95,14 @@ body, ul, li, p, a, label, input, div {
 }
 .pagination .page-link:hover {color: #000;}
 .pagination .page-link:hover, .pagination .page-link.active {
-  background-color: linear-gradient(90deg, rgba(228,127,25,1) 0%, rgba(233,45,172,1) 35%, rgba(240,237,10,1) 100%);
-  color: #fff;
+  background: linear-gradient(90deg, rgba(228,127,25,1) 0%, rgba(233,45,172,1) 35%, rgba(240,237,10,1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.text-kaffi{
+  background: linear-gradient(90deg, rgba(228,127,25,1) 0%, rgba(233,45,172,1) 35%, rgba(240,237,10,1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 /* Nav */
 #templatemo_nav_top { min-height: 40px;}
